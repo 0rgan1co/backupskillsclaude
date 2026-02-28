@@ -1,0 +1,24 @@
+{
+  "name": "claudia-ecocycle",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "init": "tsx src/cli/init.ts",
+    "board": "tsx src/cli/board.ts",
+    "ecocycle": "tsx src/cli/ecocycle.ts",
+    "alerts": "tsx src/cli/alerts.ts",
+    "dashboard": "tsx src/dashboard/server.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0"
+  }
+}
