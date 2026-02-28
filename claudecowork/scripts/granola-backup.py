@@ -90,7 +90,7 @@ def prosemirror_to_text(node: dict, depth: int = 0) -> str:
     return "\n".join(lines)
 
 
-def parse_iso(iso_str: str) -> datetime | None:
+def parse_iso(iso_str: str):
     try:
         return datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
     except (ValueError, AttributeError, TypeError):
@@ -138,7 +138,7 @@ def calc_duration(transcript_lines: list) -> str:
     return f"{hours}h {remaining:02d}min" if remaining else f"{hours}h"
 
 
-def extract_participants(doc: dict) -> list[str]:
+def extract_participants(doc: dict) -> list:
     """Extrae nombres de participantes de la estructura people."""
     people = doc.get("people") or {}
     names = []
